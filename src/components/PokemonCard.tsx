@@ -1,15 +1,17 @@
- 
+interface PokemonProps {
+    name: string,
+    imgSrc?: string,
+  }
 
-  function PokemonCard ({pokemon}) {
+  function PokemonCard ({pokemon }: { pokemon: PokemonProps }) {
     
-
     return (
       <figure>
         {pokemon.imgSrc ? (
         <img
-        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"
-        alt="Bulbasaur"
-      />
+        src= {pokemon.imgSrc}
+        alt= {pokemon.name}/>
+
       ) : (
       <p>???</p>
       )}
