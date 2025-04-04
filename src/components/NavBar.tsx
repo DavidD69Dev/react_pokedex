@@ -1,3 +1,4 @@
+
 interface Pokemon {
     name: string;
     imgSrc?: string;
@@ -10,14 +11,21 @@ interface Pokemon {
 
 
 function NavBar({ setPokemonName, pokemonList }: NavBarProps) {
+    
+    const handlePokemonClick = (name: string) => {
+        setPokemonName(name);
+        if (name === "pikachu") {
+          alert("pika pikachu !!!"); 
+        }
+      };
+    
     return (
-  
   <nav>
         {pokemonList.map((onePokemonFromTheList) => (
           <button
             key={onePokemonFromTheList.name}
             type="button"
-            onClick={() => setPokemonName(onePokemonFromTheList.name)}
+            onClick={() => handlePokemonClick(onePokemonFromTheList.name)}
           >
             {onePokemonFromTheList.name}
           </button>
