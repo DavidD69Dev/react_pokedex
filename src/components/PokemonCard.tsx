@@ -8,7 +8,7 @@ function PokemonCard () {
       <figcaption>Bulbasaur</figcaption>
       </figure>
     );
-  };
+  }
   
   export default PokemonCard;
   
